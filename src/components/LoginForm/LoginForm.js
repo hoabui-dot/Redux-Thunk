@@ -92,8 +92,8 @@ export default function LoginForm({navigation}) {
           style={styles.loginButton}
           onPress={() => {
             navigation.navigate('Home');
-            dispatch(updateName(userNameText));
-            dispatch(updatePassword(passwordText));
+            // dispatch(updateName(userNameText));
+            // dispatch(updatePassword(passwordText));
             setUserNameText('');
             setPasswordText('');
           }}>
