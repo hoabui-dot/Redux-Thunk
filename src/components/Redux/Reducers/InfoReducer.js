@@ -11,7 +11,7 @@ export default function actionForReducer(state = initialState, payload) {
     case UPDATE_NAME:
       return {
         ...state,
-        username: payload.name,
+        username: payload.username,
       };
     case UPDATE_PASSWORD:
       return {

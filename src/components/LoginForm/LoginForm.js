@@ -12,6 +12,7 @@ import styles from './LoginFormStyle';
 import Logo from '../../images/logo.png';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {useDispatch, useSelector} from 'react-redux';
+import {updateName, updatePassword} from '../Redux/Action/updateAction';
 
 export default function LoginForm({navigation}) {
   const [account, setAccount] = React.useState({
@@ -92,8 +93,8 @@ export default function LoginForm({navigation}) {
           style={styles.loginButton}
           onPress={() => {
             navigation.navigate('Home');
-            // dispatch(updateName(userNameText));
-            // dispatch(updatePassword(passwordText));
+            dispatch(updateName(userNameText));
+            dispatch(updatePassword(passwordText));
             setUserNameText('');
             setPasswordText('');
           }}>
